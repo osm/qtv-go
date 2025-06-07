@@ -10,6 +10,7 @@ jobs:
           - freebsd-amd64
           - linux-amd64
           - linux-arm64
+          - openbsd-amd64
           - windows-amd64
         include:
           - target: freebsd-amd64
@@ -26,6 +27,10 @@ jobs:
             base-image: ubuntu-latest
             build-image: arm64v8/debian:stable
             os: linux
+          - target: openbsd-amd64
+            arch: amd64
+            base-image: ubuntu-latest
+            os: openbsd
           - target: windows-amd64
             arch: amd64
             base-image: ubuntu-latest
